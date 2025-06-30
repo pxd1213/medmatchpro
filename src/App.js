@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
 import { 
   ChakraProvider, 
   Container, 
@@ -10,8 +11,15 @@ import {
   Flex, 
   Button,
   HStack,
+  IconButton,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
   useColorMode,
+  useColorModeValue,
   Image,
+  Link as ChakraLink
 } from '@chakra-ui/react';
 import { AuthProvider } from './contexts/AuthContext';
 import { useAuth } from './contexts/AuthContext';
@@ -65,7 +73,7 @@ function Navigation() {
       boxShadow="sm"
     >
       <Flex align="center" mr={5}>
-        <ChakraLink href="/" as={Link}>
+        <RouterLink to="/" as={Link}>
           <Image
             src="/assets/medenvoy-logo.svg"
             alt="MedEnvoy Logo"
@@ -74,13 +82,13 @@ function Navigation() {
             mr={2}
           />
           <Heading size="md">MedMatch Pro</Heading>
-        </ChakraLink>
+        </RouterLink>
       </Flex>
 
       <HStack as="nav" spacing={8} display={{ base: 'none', md: 'flex' }}>
-        <ChakraLink as={Link} href="/dashboard" color="inherit">
+        <RouterLink to="/dashboard" color="inherit">
           Dashboard
-        </ChakraLink>
+        </RouterLink>
         <Button onClick={toggleColorMode}>Toggle Theme</Button>
       </HStack>
 
