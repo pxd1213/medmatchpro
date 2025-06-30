@@ -66,6 +66,13 @@ function Navigation() {
     >
       <Flex align="center" mr={5}>
         <ChakraLink href="/" as={Link}>
+          <Image
+            src="/assets/medenvoy-logo.svg"
+            alt="MedEnvoy Logo"
+            height="40px"
+            width="auto"
+            mr={2}
+          />
           <Heading size="md">MedMatch Pro</Heading>
         </ChakraLink>
       </Flex>
