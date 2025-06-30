@@ -1,6 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
-import { Link as RouterLink } from 'react-router-dom';
+import { 
+  BrowserRouter as Router, 
+  Routes, 
+  Route, 
+  Link as RouterLink,
+  useNavigate 
+} from 'react-router-dom';
 import { 
   ChakraProvider, 
   Container, 
@@ -73,7 +78,7 @@ function Navigation() {
       boxShadow="sm"
     >
       <Flex align="center" mr={5}>
-        <RouterLink to="/" as={Link}>
+        <RouterLink to="/">
           <Image
             src="/assets/medenvoy-logo.svg"
             alt="MedEnvoy Logo"
