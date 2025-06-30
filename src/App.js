@@ -10,15 +10,8 @@ import {
   Flex, 
   Button,
   HStack,
-  IconButton,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
   useColorMode,
-  useColorModeValue,
   Image,
-  Link as ChakraLink
 } from '@chakra-ui/react';
 import { AuthProvider } from './contexts/AuthContext';
 import { useAuth } from './contexts/AuthContext';
@@ -56,7 +49,7 @@ function ProtectedRoute({ children }) {
 }
 
 function Navigation() {
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { toggleColorMode } = useColorMode();
   const { user, logout } = useAuth();
   const navigate = useNavigate();
 
